@@ -4,7 +4,6 @@ namespace App\Twig;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
-use Twig\TwigFunction;
 
 class RainbowExtension extends AbstractExtension
 {
@@ -39,7 +38,6 @@ class RainbowExtension extends AbstractExtension
                 continue;
             }
             $output .= sprintf('<span style="color:%s">%s</span>', self::COLORS[$i++ % 10], $letter);
-
         }
 
         return $output;

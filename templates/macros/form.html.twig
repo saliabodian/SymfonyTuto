@@ -1,0 +1,6 @@
+{% macro widget(name, label, type="text", value="") %}
+    <div>
+        <label>{{ label }}</label>
+        <input type="{{ type }}" name="{{ name }}" value="{{ value }}">
+    </div>
+{% endmacro %}
