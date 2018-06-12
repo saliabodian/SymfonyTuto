@@ -14,12 +14,14 @@ class HomepageController extends Controller
     {
         $this->logger = $logger;
     }
+
     /**
      * @Route("/", name="homepage")
      */
     public function index()
     {
         dump($this->logger->log('hello'));
+
         return $this->render('homepage/index.html.twig', [
             'controller_name' => 'HomepageController',
         ]);

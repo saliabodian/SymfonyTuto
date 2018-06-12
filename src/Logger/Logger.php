@@ -10,6 +10,12 @@ class Logger
 
     public function __construct(iterable $processors = [])
     {
+        foreach ($processors as $processor) {
+            if (!$processor instanceof ProcessorInterface) {
+                throw new \InvalidArgumentException(sprintf('The processor is not an instance of %s.', ProcessorInterface::class));
+            }
+        }
+
         $this->processors = $processors;
     }
 
