@@ -2,6 +2,8 @@
 
 namespace App\Logger;
 
+use App\Logger\Processor\ProcessorInterface;
+
 class Logger
 {
     private $processors;
