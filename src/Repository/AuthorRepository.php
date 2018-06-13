@@ -18,4 +18,14 @@ class AuthorRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Author::class);
     }
+
+    public function findWithLimit(int $limit = 100)
+    {
+        return $this
+            ->createQueryBuilder('a')
+            ->setMaxResults(min(100, $limit))
+            ->getQuery()
+            ->execute()
+        ;
+    }
 }
