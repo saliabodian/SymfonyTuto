@@ -59,7 +59,7 @@ class AuthorController extends Controller
     /**
      * @Route("/{id}/edit", name="author_edit", methods="GET|POST", requirements={"id"="\d+"})
      */
-    public function edit(Request $request, Author $author): Response
+    public function edit(Request $request, $id, Author $author): Response
     {
         $form = $this->createForm(AuthorType::class, $author);
         $form->handleRequest($request);
