@@ -32,9 +32,15 @@ class Admin implements UserInterface
     private $password;
 
     /**
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(groups={"Create"})
      */
     private $rawPassword;
+
+    /**
+     * @ORM\Column(type="json_array", nullable=true)
+     * @Assert\Count(min=1)
+     */
+    private $roles;
 
     public function getId()
     {
@@ -73,7 +79,12 @@ class Admin implements UserInterface
 
     public function getRoles()
     {
-        return ['ROLE_ADMIN'];
+        return $this->roles;
+    }
+
+    public function setRoles(array $roles)
+    {
+        $this->roles = $roles;
     }
 
     public function getSalt()

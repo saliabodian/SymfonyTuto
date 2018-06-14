@@ -1,0 +1,19 @@
+easy_admin:
+    entities:
+        Admin:
+            class: App\Entity\Admin
+            list:
+                fields:
+                    - username
+                    - roles
+            form:
+                fields:
+                    - username
+                    - { property: rawPassword, type: password, label: Password }
+                    - { property: roles, type: collection }
+            new:
+                form_options: { validation_groups: ['Default', 'Create'] }
+
+
+       # - App\Entity\Book
+       # - App\Entity\Author
