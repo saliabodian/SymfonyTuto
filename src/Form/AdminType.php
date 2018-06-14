@@ -14,7 +14,9 @@ class AdminType extends AbstractType
     {
         $builder
             ->add('username')
-            ->add('rawPassword', PasswordType::class)
+            ->add('rawPassword', PasswordType::class, [
+                'label' => 'password',
+            ])
         ;
     }
 

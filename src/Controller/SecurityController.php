@@ -31,7 +31,7 @@ class SecurityController extends Controller
      */
     public function loginCheck()
     {
-        throw new \BadMethodCallException("The security component should handle this route.");
+        throw new \BadMethodCallException('The security component should handle this route.');
     }
 
     /**
@@ -39,6 +39,6 @@ class SecurityController extends Controller
      */
     public function logout()
     {
-        throw new \BadMethodCallException("The security component should handle this route.");
+        throw new \BadMethodCallException('The security component should handle this route.');
     }
 }
