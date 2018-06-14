@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col col-lg-6">
+            {{ form_start(form, { attr: { novalidate: true }}) }}
+                {{ form_widget(form) }}
+                <button class="btn">{{ button_label|default('Save') }}</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
