@@ -22,8 +22,6 @@ class HomepageController extends Controller
     {
         dump($this->logger->log('hello'));
 
-        return $this->render('homepage/index.html.twig', [
-            'controller_name' => 'HomepageController',
-        ]);
+        return $this->render('homepage/index.html.twig');
     }
 }
