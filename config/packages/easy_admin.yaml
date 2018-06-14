@@ -13,6 +13,12 @@ easy_admin:
                     - { property: roles, type: collection }
             new:
                 form_options: { validation_groups: ['Default', 'Create'] }
+        Tag:
+            class: App\Entity\Tag
+            form:
+                fields:
+                    - title
+
 
 
        # - App\Entity\Book
